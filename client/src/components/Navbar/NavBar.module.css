@@ -1,0 +1,85 @@
+@font-face {
+    font-family: "Montserrat-Black";
+    src: url("../../fonts/Montserrat-Black.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url("../../fonts/Montserrat-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Montserrat-Bold";
+    src: url("../../fonts/Montserrat-Bold.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Montserrat-Medium";
+    src: url("../../fonts/Montserrat-Medium.ttf") format("truetype");
+}
+
+body {
+    font-family: "CustomFont", sans-serif;
+}
+
+.navbar {
+    font-family: "Montserrat-Bold";
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+.button-container {
+    display: flex;
+    gap: 15px;
+}
+.button {
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 35px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: transparent;
+    border: none;
+}
+.button:hover {
+    transition: 0.2s;
+    background-color: #222831;
+    color: white;
+}
+.buttonCart {
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 35px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: transparent;
+    border: none;
+}
+.buttonCart:hover {
+    transition: border 0.2s ease, transform 0.3s ease;
+    transform: scale(1.3);
+}
+.title {
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+}
+.title:hover {
+    cursor: pointer;
+    color: #222831;
+    transition: border 0.2s ease, transform 0.3s ease;
+    transform: scale(1.1);
+}
+/* .cart {
+    color: #f6eeee;
+}
+.cart:hover {
+    color: #ffffff;
+} */

@@ -1,0 +1,78 @@
+.container {
+    margin-left: 10%;
+    margin-top: 40px;
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+.deviceGeneral {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.picture img {
+    border-radius: 25px;
+    margin: 10px 10px 40px 0px;
+    -webkit-box-shadow: 0px 0px 30px -4px rgba(130, 130, 130, 1);
+    -moz-box-shadow: 0px 0px 30px -4px rgba(130, 130, 130, 1);
+    box-shadow: 0px 0px 30px -4px rgba(130, 130, 130, 1);
+}
+.picture h2 {
+    color: white;
+    font-family: "Montserrat-Bold";
+}
+.description {
+    width: 400px;
+}
+.description h1 {
+    color: white;
+    font-family: "Montserrat-Bold";
+    margin-bottom: 20px;
+}
+.parameters {
+    border-radius: 20px;
+    overflow: hidden;
+    font-family: "Montserrat-Medium";
+    -webkit-box-shadow: 0px 0px 30px -4px rgba(130, 130, 130, 1);
+    -moz-box-shadow: 0px 0px 30px -4px rgba(130, 130, 130, 1);
+    box-shadow: 0px 0px 30px -4px rgba(130, 130, 130, 1);
+}
+.parameters p {
+    margin-left: 15px;
+}
+.description h2 {
+    color: white;
+    padding: 10px;
+    font-size: 25px;
+    font-family: "Montserrat-Medium";
+    padding: 0;
+}
+.buttonContainer {
+    background-color: white;
+    padding: 50px;
+    border-radius: 25px;
+    margin-right: 35%;
+}
+.buttonContainer button {
+    font-family: "Montserrat-Bold";
+    font-size: 25px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+}
+.buttonContainer button:hover {
+    transition: 0.3s;
+    background-color: #222831;
+    color: white;
+}
+.buttonContainer p {
+    font-family: "Montserrat-Bold";
+    font-size: 36px;
+}

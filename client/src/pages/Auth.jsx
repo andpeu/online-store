@@ -5,6 +5,7 @@ import { LOGIN_ROUTE, REGISTRATION_ROUTE, SHOP_ROUTE } from "../utils/consts";
 import { login, registration } from "../http/userAPI";
 import { observer } from "mobx-react-lite";
 import Context from "../index";
+import { initializeCart } from "../pages/CartPage";
 
 const Auth = observer(() => {
     const { user } = useContext(Context);
@@ -24,6 +25,7 @@ const Auth = observer(() => {
             }
             user.setUser(user);
             user.setIsAuth(true);
+            initializeCart();
             navigate(SHOP_ROUTE);
         } catch (e) {
             alert(e.response?.data?.message || "Something went wrong");

@@ -39,6 +39,7 @@ const CreateDevice = observer(({ show, onHide }) => {
     };
 
     const addDevice = () => {
+        console.log(info);
         const formData = new FormData();
         formData.append("name", name);
         formData.append("price", `${price}`);

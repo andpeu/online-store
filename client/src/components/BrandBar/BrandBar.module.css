@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    gap: 10px;
+}
+.brand {
+    border-radius: 15px;
+    background-color: white;
+    padding: 10px;
+    height: 45px;
+    font-family: "Montserrat-Medium";
+}
+.brand:hover {
+    background-color: #222831;
+    color: white;
+    transition: 0.2s;
+}

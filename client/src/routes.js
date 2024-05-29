@@ -1,11 +1,11 @@
 import Admin from "./pages/Admin";
 import Auth from "./pages/Auth";
-import Basket from "./pages/Basket";
+import Cart from "./pages/CartPage";
 import DevicePage from "./pages/DevicePage";
 import Shop from "./pages/Shop";
 import {
     ADMIN_ROUTE,
-    BASKET_ROUTE,
+    CART_ROUTE,
     DEVICE_ROUTE,
     LOGIN_ROUTE,
     REGISTRATION_ROUTE,
@@ -18,8 +18,8 @@ export const authRoutes = [
         Component: Admin,
     },
     {
-        path: BASKET_ROUTE,
-        Component: Basket,
+        path: CART_ROUTE,
+        Component: Cart,
     },
 ];
 
