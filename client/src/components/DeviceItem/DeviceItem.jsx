@@ -23,6 +23,7 @@ const DeviceItem = ({ device, brands }) => {
                     <div>
                         {" "}
                         <h1>{device.name}</h1>
+                        <h1>$ {device.price}</h1>
                     </div>
                 </div>
                 <button

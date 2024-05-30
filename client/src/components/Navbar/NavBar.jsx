@@ -11,14 +11,6 @@ import { useNavigate } from "react-router-dom";
 import styles from "./NavBar.module.css";
 import { ShoppingCart } from "@phosphor-icons/react";
 
-// расшифрока токена чтобы получить роль юзера
-const token = localStorage.getItem("token");
-let payload;
-if (token) {
-    const parts = token.split(".");
-    payload = JSON.parse(base64UrlDecode(parts[1]));
-}
-
 function base64UrlDecode(str) {
     return decodeURIComponent(
         atob(str.replace(/-/g, "+").replace(/_/g, "/"))
@@ -45,12 +37,19 @@ const NavBar = observer(() => {
     };
 
     useEffect(() => {
+        const token = localStorage.getItem("token");
+        let payload;
+        if (token) {
+            const parts = token.split(".");
+            payload = JSON.parse(base64UrlDecode(parts[1]));
+        }
+
         if (payload && payload.role === "ADMIN") {
             setIsAdmin(true);
         } else {
             setIsAdmin(false);
         }
-    }, []);
+    }, [user.isAuth]);
 
     return (
         <header className={styles.navbar}>

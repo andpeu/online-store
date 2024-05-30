@@ -54,7 +54,7 @@ const CartItem = ({ cart, updateTotalPrice }) => {
                                 fontSize: "20px",
                             }}
                         >
-                            {deviceData.price}$
+                            $ {deviceData.price}
                         </p>
                     </div>
                     <div className={styles.quantity}>

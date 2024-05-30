@@ -6,6 +6,7 @@ import { login, registration } from "../http/userAPI";
 import { observer } from "mobx-react-lite";
 import Context from "../index";
 import { initializeCart } from "../pages/CartPage";
+import styles from "./styles/Auth.module.css";
 
 const Auth = observer(() => {
     const { user } = useContext(Context);
@@ -33,55 +34,54 @@ const Auth = observer(() => {
     };
 
     return (
-        <Container
-            className='d-flex justify-content-center align-items-center'
-            style={{ height: window.innerHeight - 54 }}
-        >
-            <Card
+        <div className={styles.container}>
+            <div
                 style={{ width: 600 }}
-                className='p-5'
+                className={styles.containerChild}
             >
                 <h2 className='m-auto'>
                     {isLogin ? "Авторизация" : "Регистрация"}
                 </h2>
-                <Form className='d-flex flex-column'>
-                    <Form.Control
+                <div className='d-flex flex-column'>
+                    <input
                         className='mt-3'
                         placeholder='Введите ваш email...'
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     />
-                    <Form.Control
+                    <input
                         className='mt-3'
                         placeholder='Введите ваш пароль...'
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         type='password'
                     />
-                    <Row className='d-flex justify-content-between mt-3'>
+                    <div className={styles.bottom}>
                         {isLogin ? (
-                            <div>
+                            <div className={styles.options}>
                                 Нет аккаунта?{" "}
-                                <NavLink to={REGISTRATION_ROUTE}>
-                                    Зарегистрируйся!
-                                </NavLink>
+                                <p onClick={() => navigate(REGISTRATION_ROUTE)}>
+                                    Зарегистрироваться
+                                </p>
                             </div>
                         ) : (
-                            <div>
+                            <div className={styles.options}>
                                 Есть аккаунт?{" "}
-                                <NavLink to={LOGIN_ROUTE}>Войдите!</NavLink>
+                                <p onClick={() => navigate(LOGIN_ROUTE)}>
+                                    Войти
+                                </p>
                             </div>
                         )}
-                        <Button
+                        <button
                             variant={"outline-success"}
                             onClick={click}
                         >
                             {isLogin ? "Войти" : "Регистрация"}
-                        </Button>
-                    </Row>
-                </Form>
-            </Card>
-        </Container>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     );
 });
 
