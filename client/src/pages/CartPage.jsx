@@ -52,6 +52,7 @@ function calculateTotalPrice(cart, devices) {
         return total;
     }, 0);
 }
+
 function calculateTotalAmount(cart, devices) {
     return cart.reduce((total, cartItem) => {
         const device = devices.find((device) => device.id === cartItem.id);
@@ -73,15 +74,6 @@ const CartPage = observer(() => {
             allDevices.setDevices(data);
         });
     }, [allDevices]);
-
-    console.log("allDevices");
-    console.log(allDevices);
-    console.log(
-        allDevices.devices.map((item) => ({
-            id: item.id,
-            price: item.price,
-        }))
-    );
 
     const updateTotalPrice = () => {
         const cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -114,7 +106,6 @@ const CartPage = observer(() => {
             id: item.id,
         }))
     );
-    console.log(totalAmount);
 
     return (
         <div className={styles.container}>

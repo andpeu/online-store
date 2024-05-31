@@ -36,9 +36,6 @@ const NavBar = observer(() => {
         navigate(SHOP_ROUTE);
     };
 
-    let cartAmount = JSON.parse(localStorage.getItem("cart")).length;
-    console.log(cartAmount);
-
     useEffect(() => {
         const token = localStorage.getItem("token");
         let payload;
@@ -74,7 +71,7 @@ const NavBar = observer(() => {
                                 className={styles.button}
                                 onClick={() => navigate(ADMIN_ROUTE)}
                             >
-                                Админ панель
+                                Панель админа
                             </button>
                         )}
                         <button

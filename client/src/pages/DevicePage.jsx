@@ -12,7 +12,6 @@ const DevicePage = () => {
         fetchOneDevice(id).then((data) => setDevice(data));
     }, [id]);
 
-    console.log(device);
     return (
         <div className={styles.container}>
             <div className={styles.deviceGeneral}>

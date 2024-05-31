@@ -51,7 +51,6 @@ const TypeBrand = sequelize.define('type_brand', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
 })
 
-
 User.hasOne(Cart)
 Cart.belongsTo(User)
 
