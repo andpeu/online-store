@@ -1,10 +1,5 @@
-import React, { useContext, useEffect, useState } from "react";
-import Context from "../..";
-import {
-    fetchAllDevices,
-    fetchDevices,
-    fetchOneDevice,
-} from "../../http/deviceAPI";
+import React, { useEffect, useState } from "react";
+import { fetchOneDevice } from "../../http/deviceAPI";
 import styles from "./CartItem.module.css";
 import { useNavigate } from "react-router-dom";
 import { DEVICE_ROUTE } from "../../utils/consts";

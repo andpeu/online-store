@@ -1,5 +1,4 @@
 import React, { useContext, useEffect } from "react";
-import { Col, Container, Row } from "react-bootstrap";
 import TypeBar from "../components/TypeBar/TypeBar";
 import BrandBar from "../components/BrandBar/BrandBar";
 import DeviceList from "../components/DeviceList/DeviceList";

@@ -1,9 +1,7 @@
-import React, { useContext } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import { DEVICE_ROUTE } from "../../utils/consts";
 import styles from "./DeviceItem.module.css";
-import Context from "../..";
-import { Log, ShoppingCart, Star } from "@phosphor-icons/react";
 import { addToCart } from "../../pages/CartPage";
 
 const DeviceItem = ({ device, brands }) => {

@@ -14,6 +14,12 @@
     margin-left: 50px;
     margin-top: 50px;
     color: white;
-    font-size: 38px;
+
     font-family: "Montserrat-Bold";
+}
+.total h1 {
+    font-size: 38px;
+}
+.total p {
+    font-size: 24px;
 }

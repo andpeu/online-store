@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Container, Form, Card, Button, Row } from "react-bootstrap";
-import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { LOGIN_ROUTE, REGISTRATION_ROUTE, SHOP_ROUTE } from "../utils/consts";
 import { login, registration } from "../http/userAPI";
 import { observer } from "mobx-react-lite";

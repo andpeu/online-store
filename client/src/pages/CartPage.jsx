@@ -44,11 +44,20 @@ export function removeFromCart(device) {
 
 function calculateTotalPrice(cart, devices) {
     return cart.reduce((total, cartItem) => {
-        // Найти устройство по id в массиве девайсов
         const device = devices.find((device) => device.id === cartItem.id);
-        // Если устройство найдено, добавить его цену, умноженную на количество, к общей сумме
+
         if (device) {
             total += device.price * cartItem.quantity;
+        }
+        return total;
+    }, 0);
+}
+function calculateTotalAmount(cart, devices) {
+    return cart.reduce((total, cartItem) => {
+        const device = devices.find((device) => device.id === cartItem.id);
+
+        if (device) {
+            total += cartItem.quantity;
         }
         return total;
     }, 0);
@@ -99,6 +108,13 @@ const CartPage = observer(() => {
     }, [allDevices.devices]);
 
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const totalAmount = calculateTotalAmount(
+        cart,
+        allDevices.devices.map((item) => ({
+            id: item.id,
+        }))
+    );
+    console.log(totalAmount);
 
     return (
         <div className={styles.container}>
@@ -111,7 +127,11 @@ const CartPage = observer(() => {
                     ></CartItem>
                 ))}
             </div>
-            <div className={styles.total}>Total: {priceValue}$</div>
+            <div className={styles.total}>
+                <p>Количество позиций: {cart.length}</p>
+                <p>Количество товаров: {totalAmount}</p>
+                <h1>Итог: {priceValue}$</h1>
+            </div>
         </div>
     );
 });
